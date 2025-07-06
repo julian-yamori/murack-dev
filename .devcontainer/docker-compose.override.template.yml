@@ -1,0 +1,15 @@
+services:
+  dev:
+    environment:
+      WEB_BASIC_USER: USER
+      WEB_BASIC_PW: PASSWORD
+
+  postgres:
+    environment:
+      POSTGRES_USER: USER
+      POSTGRES_PASSWORD: PASSWORD
+    
+  pgadmin:
+    environment:
+      PGADMIN_DEFAULT_EMAIL: example@example.com
+      PGADMIN_DEFAULT_PASSWORD: PASSWORD

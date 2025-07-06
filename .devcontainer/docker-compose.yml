@@ -1,0 +1,48 @@
+services:
+  dev:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    environment:
+      # egui 用
+      DISPLAY:
+    volumes:
+      - type: bind
+        source: ..
+        target: /workspace
+      # Claude のデータ (特に会話履歴) を保存する
+      - type: volume
+        source: claude
+        target: /home/user/.claude
+      # コンテナ内の egui アプリを起動するため、XWayland を繋げる
+      - type: bind
+        source: /tmp/.X11-unix
+        target: /tmp/.X11-unix
+    ports:
+      # Murack Web
+      - "127.0.0.1:3000:3000"
+      - "127.0.0.1:5173:5173"
+    command: sleep infinity
+
+  postgres:
+    image: postgres:17.5
+    environment:
+      POSTGRES_DB: murack
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  
+  pgadmin:
+    image: dpage/pgadmin4:9
+    ports:
+      - 127.0.0.1:8080:80
+    volumes:
+      - type: volume
+        source: pgadmin
+        target: /var/lib/pgadmin
+
+volumes:
+  claude:
+  postgres_data:
+  pgadmin:

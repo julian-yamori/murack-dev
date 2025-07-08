@@ -1,0 +1,3 @@
+[submodule "murack-core"]
+	path = murack-core
+	url = https://github.com/julian-yamori/murack-core.git

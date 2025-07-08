@@ -3,7 +3,8 @@
     "allow": [
     ],
     "deny": [
-      "Read(**/.env*)"
+      "Read(**/.env*)",
+      "Read(.devcontainer/docker-compose.override.yml)"
     ]
   }
 }

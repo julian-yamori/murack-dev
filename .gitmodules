@@ -1,3 +1,9 @@
 [submodule "murack-core"]
 	path = murack-core
 	url = https://github.com/julian-yamori/murack-core.git
+[submodule "murack-sync"]
+	path = murack-sync
+	url = https://github.com/julian-yamori/murack-sync.git
+[submodule "murack-web"]
+	path = murack-web
+	url = https://github.com/julian-yamori/murack-web.git

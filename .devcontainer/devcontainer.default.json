@@ -1,5 +1,5 @@
 {
-  "name": "murack-workspace",
+  "name": "murack-dev",
   "dockerComposeFile": ["docker-compose.yml", "docker-compose.override.yml"],
   "service": "dev",
   "workspaceFolder": "/workspace",

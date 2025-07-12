@@ -11,6 +11,8 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     libssl-dev \
     # web frontend の gen-api で使う
     curl \
+    # github-cli の feature で使う
+    wget \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 

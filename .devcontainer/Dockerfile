@@ -10,6 +10,8 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     libxkbcommon-dev \
     libssl-dev \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* \
-    && cargo install cargo-audit \
+    && rm -rf /var/lib/apt/lists/*
+
+USER vscode
+RUN cargo install cargo-audit \
     && cargo install sqlx-cli --no-default-features --features native-tls,postgres

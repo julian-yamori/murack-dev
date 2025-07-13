@@ -1,20 +1,20 @@
 FROM mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 
-# RUN apt-get update && apt-get install --no-install-recommends -y \
-#     # egui の Demo に必要なパッケージ
-#     libclang-dev \
-#     libgtk-3-dev \
-#     libxcb-render0-dev \
-#     libxcb-shape0-dev \
-#     libxcb-xfixes0-dev \
-#     libxkbcommon-dev \
-#     libssl-dev \
+RUN apt-get update && apt-get install --no-install-recommends -y \
+    # egui の Demo に必要なパッケージ
+    libclang-dev \
+    libgtk-3-dev \
+    libxcb-render0-dev \
+    libxcb-shape0-dev \
+    libxcb-xfixes0-dev \
+    libxkbcommon-dev \
+    libssl-dev \
 #     # web frontend の gen-api で使う
 #     curl \
 #     # github-cli の feature で使う
 #     wget \
-#     && apt-get clean \
-#     && rm -rf /var/lib/apt/lists/*
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # WORKDIR /workspace
 

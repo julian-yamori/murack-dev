@@ -3,7 +3,7 @@
   "dockerComposeFile": ["docker-compose.yml", "docker-compose.override.yml"],
   "service": "dev",
   "workspaceFolder": "/workspace",
-  "remoteUser": "user",
+  "remoteUser": "vscode",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "version": "22"

@@ -13,7 +13,7 @@ services:
       # Claude のデータ (特に会話履歴) を保存する
       - type: volume
         source: claude
-        target: /home/user/.claude
+        target: /home/vscode/.claude
       # コンテナ内の egui アプリを起動するため、XWayland を繋げる
       - type: bind
         source: /tmp/.X11-unix

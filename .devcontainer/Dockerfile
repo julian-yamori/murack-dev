@@ -15,3 +15,5 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 USER vscode
 RUN cargo install cargo-audit \
     && cargo install sqlx-cli --no-default-features --features native-tls,postgres
+
+COPY .devcontainer/murack_sync_config.toml /home/vscode/.config/murack-sync/config.toml

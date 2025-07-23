@@ -3,6 +3,10 @@ services:
     environment:
       WEB_BASIC_USER: USER
       WEB_BASIC_PW: PASSWORD
+    volumes:
+      - type: bind
+        source: ../../test_data
+        target: /test_data
 
   postgres:
     environment:

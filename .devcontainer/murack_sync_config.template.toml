@@ -1,0 +1,4 @@
+pc_lib = "/test_data/pc/"
+dap_lib = "/test_data/dap/lib/"
+dap_playlist = "/test_data/dap/"
+database_url = "postgresql://USER:PASSWORD@postgres:5432/murack"

@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
+FROM mcr.microsoft.com/devcontainers/rust:1.0-bookworm
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     # egui の Demo に必要なパッケージ
